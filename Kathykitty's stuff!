@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no" />
+
+    <title>[SpaceBlast.io] - Play Space Blast Online! - unblocked io game</title>
+        <link rel="alternate" hreflang="en" href="https://spaceblast.io/index.html" />
+        <link rel="alternate" hreflang="tr" href="https://spaceblast.io/index-tr.html" />
+            
+
+    <script>
+        
+        var __STR_GAME__TOTAL_HEALTH = "(1)   Total Health";
+        var __STR_GAME__HEALTH_RES = "(2)   Health Restoration";
+        var __STR_GAME__SHIP_SPEED = "(3)   Ship Speed";
+        var __STR_GAME__FIRE_RATE = "(4)   Fire Rate";
+        var __STR_GAME__WEAPON_DMG = "(5)   Weapon Damage";
+        var __STR_GAME__BULLET_SPEED = "(6)   Bullet Speed";
+
+        var __STR_GAME__TOTAL_HEALTH_M = "Health";
+        var __STR_GAME__HEALTH_RES_M = "Regen";
+        var __STR_GAME__SHIP_SPEED_M = "Speed";
+        var __STR_GAME__FIRE_RATE_M = "Fire Rate";
+        var __STR_GAME__WEAPON_DMG_M = "Damage";
+        var __STR_GAME__BULLET_SPEED_M = "Fire Speed";
+
+        var __STR_GAME__SCORE = "Score";
+        var __STR_GAME__LVL = "Lvl";
+        var __STR_GAME__SCOREBOARD = "Scoreboard";
+        var __STR_GAME__SKILLPOINTS = "Skill Points";
+        var __STR_GAME__LOADING = "Loading ...";
+        var __STR_GAME__CONN_LOST = "Connection is lost!";
+        var __STR_GAME__ACHIEVEMENT = "Achievement";
+        var __STR_GAME__SELECT_YOUR_SHIP = "Select Your Ship!";
+        var __STR_GAME__EFFECTS_ON = "Effects: On";
+        var __STR_GAME__EFFECTS_OFF = "Effects: Off";
+        var __STR_GAME__HS_SHIP = "Ship";
+        var __STR_GAME__HS_PLAYER = "Player";
+        var __STR_GAME__HS_PLAY_TIME = "Play Time";
+        var __STR_GAME__HS_DATE = "Date";
+        var __STR_GAME__HS_NOW = "Just now";
+        var __STR_GAME__HS_ERROR = "An error occured :/";
+        var __STR_GAME__ACH_LOCKED = "locked";
+        var __STR_GAME__AN_ASTEROID = "an asteroid";
+        var __STR_GAME__OFFLINE = "offline";
+        var __STR_GAME__PLAYERS = "players";
+        var __STR_GAME__ARE_YOU_SURE_TO_QUIT = "Are you sure you want to quit?";
+
+        var __STR_GAME__BLACK_HOLES = "Black Holes";
+        var __STR_GAME__BLACK_HOLES_EXP = "Destroy 3 black holes";
+        var __STR_GAME__CASUAL_PLAYER = "Casual Player";
+        var __STR_GAME__CASUAL_PLAYER_DESC = "Reach up to level 15";
+        var __STR_GAME__FULLY_EQUIPPED = "Fully Equipped";
+        var __STR_GAME__FULLY_EQUIPPED_DESC = "Upgrade all skills to maximum";
+        var __STR_GAME__HARDCORE_CMDR = "Hardcore Commander";
+        var __STR_GAME__HARDCORE_CMDR_EXP = "Reach up to level 30";
+        var __STR_GAME__LEAD_PLAYER = "Lead Player";
+        var __STR_GAME__LEAD_PLAYER_EXP = "Become top player";
+        var __STR_GAME__MASTERMIND = "Mastermind";
+        var __STR_GAME__MASTERMIND_EXP = "Stay on top of the score board for 2 minutes or more!";
+        var __STR_GAME__MASTERPIECE = "Masterpiece";
+        var __STR_GAME__MASTERPIECE_EXP = "Customize your ship at least 5 times";
+        var __STR_GAME__NOVICEPLAYER = "Novice Player";
+        var __STR_GAME__NOVICEPLAYER_EXP = "Get your first level up!";
+        var __STR_GAME__WORLDEATER = "World Eater";
+        var __STR_GAME__WORLDEATER_EXP = "Destroy 100 meteors";
+    
+    </script>
+
+    <script src="space-blast.js"></script>
+    <script src="jscolor.min.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-93488455-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Select your ship and battle against other players.">
+    <meta name="keywords" content="multiplayer game, io game, space blast, spaceblast.io, spaceblastio, asteroid, meteor, shooter, ship, space ship">
+    <meta name="author" content="spaceblast">
+    <meta name="thumbnail" content="https://spaceblast.io/assets/images/title_image.png" />
+
+    <meta property="og:url" content="https://spaceblast.io" />
+    <meta property="og:title" content="SpaceBlast.io - Select your ship and take off!" />
+    <meta property="og:description" content="Select your ship and battle against other players." />
+    <meta property="og:image" content="https://spaceblast.io/assets/images/title_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+
+    <!-- Ad includes -->
+    <script>
+        var aiptag = aiptag || {};
+        aiptag.cmd = aiptag.cmd || [];
+        aiptag.cmd.display = aiptag.cmd.display || [];	aiptag.cmd.player = aiptag.cmd.player || [];
+        // Show GDPR consent tool
+        aiptag.gdprShowConsentTool = true;
+        // If you use your own GDPR consent tool please set aiptag.gdprConsent = false; if an EU user has declined or not yet accepted marketing cookies, for users outside the EU or for users that accepted the GDPR please use aiptag.gdprConsent = true;
+        aiptag.gdprShowConsentToolButton = true; // TODO: remove this one 
+    
+        aiptag.cmd.player.push(function() {
+            adplayer = new aipPlayer({
+                AD_WIDTH: 960,
+                AD_HEIGHT: 540,
+                AD_FULLSCREEN: true,
+                AD_CENTERPLAYER: false,
+                LOADING_TEXT: 'loading advertisement',
+                PREROLL_ELEM: function(){return document.getElementById('preroll')},
+                AIP_COMPLETE: function ()  {
+                    videoAdEnded();
+                },
+                AIP_REMOVE: function ()  {
+                }
+            });
+        });
+        </script>
+    <script async src="//api.adinplay.com/libs/aiptag/pub/SPB/spaceblast.io/tag.min.js"></script>
+</head>
+<body onload="main()">
+<div id="preroll"></div>
+<div id="loginPanel">
+    <div id="changeLogArea">
+        <br>
+        <span class="useUbuntu">How to play!</span>
+        <div class="useSans">
+            - Shoot asteroids (circles) to gain points<br>
+                                - Use skill points to improve your ship.<br>
+                                - Eliminate other players!<br>
+        </div>
+        <br>
+        <span class="useUbuntu">Change log</span>
+        <div class="useSans">
+            <span style="text-decoration: underline">Version 1.04</span><br>
+                - Introduced ship classes.<br>
+                                - Improved bullet accuracy.<br>
+                                - Changed level cap to 35<br>
+                                - Minor performance improvements and bug fixes<br>
+                                - Improvement in game balance.<br>
+                <a href="https://www.reddit.com/r/spaceblastio/comments/66vq5o/change_log/" target="_blank" style="color: white;">- Change log history.</a>
+        </div>
+        <br>
+        <span class="useUbuntu">Bonus</span>
+        <div class="useSans">
+            <a href="./prototype/index.html" target="_blank" style="color: white;">- Check out the first prototype of the game (single player)!</a>
+            <br>
+            <a style="color: white;" href="http://asyncrobot.com" target="_blank">- Developer: asyncrobot.com</a>
+        </div>
+        <div id="youtubeVideoArea">
+            <span class="useUbuntu" style="line-height: 1.8em"><img src="assets/images/youtube-icon-32.png" style="vertical-align: middle"> Watch on Youtube</span>
+            <br>
+            <script>
+                //var youtubeIds = ["JtBy75lsoJc","LPBULarUzYc","O9kyICWGn0M","faVchf7BLPM","ReMlCueRhRw","29E08khZ5wg","Cuc9dKJAU84"];
+                //var youtubeId = youtubeIds[Math.floor(Math.random() * youtubeIds.length)];
+                //document.write('<a href="https://www.youtube.com/watch?v=' + youtubeId + '" target="_blank"><img class="youtubeThumb" src="https://img.youtube.com/vi/' + youtubeId + '/0.jpg"></a>');
+                document.write('<a href="https://www.youtube.com/watch?v=WysKItr1TsY" target="_blank"><img class="youtubeThumb" src="https://img.youtube.com/vi/WysKItr1TsY/0.jpg"></a>');
+            </script>
+        </div>
+    </div>
+    
+    <div id="appStoreContainer">
+        <a href="https://itunes.apple.com/app/spaceblast-io/id1378599979?mt=8" target="_blank"><img src="assets/images/appstore-160.png" /></a>
+        <br>
+        <a href="https://play.google.com/store/apps/details?id=io.spaceblast.spaceblastgameapp" target="_blank"><img src="assets/images/googleplay-160.png" /></a>
+        <br>
+        <a href="#" onclick="aipAPItag.showConsentToolSettings();" style="color: #fff; font-size: 10pt;">Privacy settings</a>
+        <span style="color: #fff; font-size: 10pt;">|</span> <a href="http://unblocked-games.rocks" target="_blank" style="color: #fff; font-size: 10pt;">Unblocked Games</a> <span style="color: #fff; font-size: 10pt;">|</span> <a href="http://unblocked-io-games.com" target="_blank" style="color: #fff; font-size: 10pt;">Unblocked IO Games</a>
+    </div>
+    
+
+    <div id="topRightButtonArea">
+        <a href="http://iogames.space" target="_blank" style="text-decoration: none; color: #FFF" class="roundedBlueBox menuButton" id="ioGamesButton">
+            More IO Games
+        </a>
+        <br>
+        
+        <div class="roundedBlueBox menuButton" id="achievementsButton">
+            Achievements
+        </div>
+        <br>
+        <div class="roundedBlueBox menuButton" id="howToPlayButton">
+            How to Play?
+        </div>
+        <br>
+        <div class="roundedBlueBox menuButton" id="highScoreButton">
+            High Scores
+        </div>
+        <br>
+        <div class="roundedBlueBox menuButton" id="effectsButton" title="If you are having performance problems, try turning effects off">
+            Effects: On
+        </div>
+    </div>
+
+    <div id="bottomRightButtonArea">
+        <script>
+            var gameLinks = [
+                {
+                    title: "Play Nebulaz.IO",
+                    link: "http://nebulaz.io",
+                    image: "assets/images/play_nebulaz_io.jpg"
+                },
+                {
+                    title: "Play BombArena.IO",
+                    link: "http://bombarena.io",
+                    image: "assets/images/play_bomb_arena_io.jpg"
+                },
+                {
+                    title: "Play SnakeIsland.IO",
+                    link: "http://www.snakeisland.io",
+                    image: "assets/images/play_snakeisland.jpg"
+                },
+            ];
+            var rndGame = Math.floor(Math.random()*gameLinks.length);
+            var selectedGameLink = gameLinks[rndGame];
+            document.write('<a href="'+selectedGameLink.link+'" target="_blank" title="'+selectedGameLink.title+'"><img src="'+selectedGameLink.image+'" alt="'+selectedGameLink.title+'" title="'+selectedGameLink.title+'" style="margin-bottom: 5px;"></a>');
+        </script>
+        <br>
+        <a href="https://discord.gg/9RpMf8w" title="Join our discord chat!" rel="nofollow" target="_blank"><img src="assets/images/discord-icon-32.png" style="vertical-align: middle"></a>
+        <a href="https://www.reddit.com/r/spaceblastio/" title="Check out /r/spaceblast.io subreddit!" rel="nofollow" target="_blank"><img src="assets/images/reddit-icon-32.png" style="vertical-align: middle"></a>
+        <a href="https://twitter.com/asyncrobot" title="Follow on twitter!" rel="nofollow" target="_blank"><img src="assets/images/twitter-icon-32.png" style="vertical-align: middle"></a>
+    </div>
+
+    <div id="loginPanelInner" class="animated fadeIn">
+        <div>
+                <img class="logo" src="assets/images/logo.png" alt="SpaceBlast.io logo" title="SpaceBlast.io logo">
+        </div>
+
+        <div id="inputContainer" class="roundedGrayBox">
+            <input type="text" id="nameInput" placeholder="Enter your player name!" maxlength="15" style="text-align: center"/>
+        </div>
+        <div style="margin: 10px auto; text-align: center;">
+            <div class="roundedBlueBox menuButton" id="playButton">
+                Play!
+            </div>
+            <div class="roundedBlueBox menuButton" id="soundButton">
+                &nbsp;
+            </div>
+        </div>
+
+        <div style="margin: auto; text-align: center;">
+            <div id="adArea1" style="display: inline-block; background-color: #999; margin-top: 10px; margin-bottom: 10px; margin-right: 10px;">
+            </div>
+
+            <div style="display: inline-block; vertical-align: top; margin-top: 30px;">
+                <div class="title">
+                    <div>
+                        <div class="roundedGrayBox"  style="display: inline-block">
+                            Select Your Ship
+                            <br>
+
+                            <svg height="80" width="70">
+                                <g transform="translate(42,5) rotate(45) scale(0.5)">
+                                    <polygon id="shipBodyId"
+                                             points="42.4264,0 84.8528,102.4264 0,102.4264"
+                                             style="fill:#00B2E1;stroke:#555555;stroke-width:15"
+                                    ></polygon>
+                                    <line id="shipBarrelId" x1="42.4264" y1="50" x2="42.4264" y2="-19" style="stroke:#F14E54;stroke-width:22"></line>
+                                </g>
+                            </svg>
+
+                            <br>
+
+                            <select onchange="colorSelectionChanged(this)" style="background-color: #FFFFFF">
+                                <option value="0">Classic</option>
+                                <option value="1">Venom</option>
+                                <option value="2">Dark</option>
+                                <option value="3">Jelly</option>
+                                <option value="4">Fire</option>
+                                <option value="5">Lime</option>
+                            </select>
+                            <input id="colorPicker1" type="button" value="" class="jscolor {valueElement:'color1', onFineChange:'onColorSelected(this)'}" style="background-color: #555555; width: 50px;">
+                            <input id="colorPicker2" type="button" value="" class="jscolor {valueElement:'color2', onFineChange:'onColorSelected(this)'}" style="background-color: #00B2E1; width: 50px;">
+                            <input id="colorPicker3" type="button" value="" class="jscolor {valueElement:'color3', onFineChange:'onColorSelected(this)'}" style="background-color: #F14E54; width: 50px;">
+
+                            <input name="color1" type="hidden" id="color1" value="555555">
+                            <input name="color2" type="hidden" id="color2" value="00B2E1">
+                            <input name="color3" type="hidden" id="color3" value="F14E54">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" style="width: 100%; height: 100%; position: fixed; left:0; top: 0; z-index:1; background-color: rgba(0,0,0, 0.8); overflow-x: hidden;">
+        <div style="position: relative; top: 25%; width: 100%; text-align: center; margin-top: 30px;  color: #FFFFFF; font-size: 48px;">
+            Loading ...
+        </div>
+    </div>
+</div>
+
+<div id="gameOverOverlay" class="animated fadeIn" style="display: none; width: 100%; height: 100%; position: fixed; left:0; top: 0; z-index:1; background-color: rgba(0,0,0, 0.8); overflow-x: hidden;">
+    <div class="gameOverContainer">
+        <div style="text-align: center">
+            <div style="display: inline-block; width: 30%; margin: 10px;">
+                <div id="gameOverAchievements" class="useSans">
+
+                </div>
+            </div>
+            <div style="display: inline-block; width: 30%;">
+                <div>
+                    <h2>Game Over</h2>
+                </div>
+                <div id="gameOverStatsContainer" >
+                    Your ship exploded by <span id="killerShipArea"></span>!<br>
+                    <div id="killerShipSvgArea"></div>
+                    <br>
+                    Game Time: <span id="overlayTimeIndicator">00:00</span>
+                    <br>
+                    Level: <span id="overlayLevelIndicator">1</span>
+                    <br>
+                    Score: <span id="overlayScoreIndicator">0</span>
+
+                    <div class="roundedGrayBox" style="width: 90%; margin: 10px auto 10px auto;">
+                        <input type="text" id="gameOverNameInput" value="" maxlength="15" style="text-align: center"/>
+                    </div>
+
+                    <br>
+
+                    <div class="roundedBlueBox menuButton" id="gameOverHighScoreButton">
+                        High Scores
+                    </div>
+                    <div class="roundedBlueBox menuButton" id="overlayPlayButton">
+                        Play Again
+                    </div>
+                </div>
+            </div>
+            <div style="display: inline-block; width: 30%; margin: 10px;">
+
+                <div id="adArea2" style="width: 300px; height: 250px; margin: auto; background-color: #999;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="highScorePanel" class="animated fadeIn" style="display: none; background-color: rgba(0,0,0, 0.8); z-index:2; width: 100%; height: 100%; position: fixed; left:0; top:0; overflow-x: hidden;">
+    <div id="highScoreCloseBackPanel" style="position: absolute; width: 100%; height: 100%"></div>
+    <div id="highScorePanelInner">
+        <div>
+            <h2>
+                High Scores
+            </h2>
+        </div>
+
+        <div class="roundedBlueBox menuButton" id="highScoresLoadTodayButton">
+            Today
+        </div>
+        <div class="roundedBlueBox menuButton" id="highScoresLoadWeekButton">
+            Weekly
+        </div>
+        <div class="roundedBlueBox menuButton" id="highScoresLoadMonthButton">
+            Monthly
+        </div>
+        <div class="roundedBlueBox menuButton" id="highScoresLoadAllButton">
+            All
+        </div>
+        <div class="greenButton roundedBlueBox menuButton" id="highScoresBackButton">
+            Close
+        </div>
+
+        <div id="highScoresContainer" class="roundedGrayBox useSans">
+            Loading ...
+        </div>
+    </div>
+</div>
+
+<div id="achievementsPanel" class="animated fadeIn" style="display: none; background-color: rgba(0,0,0, 0.8); z-index:2; width: 100%; height: 100%; position: fixed; left:0; top:0; overflow-x: hidden;">
+    <div id="achievementsCloseBackPanel" style="position: absolute; width: 100%; height: 100%"></div>
+    <div id="achievementsPanelInner">
+        <div>
+            <h2>
+                Achievements
+            </h2>
+        </div>
+
+        <div id="achievementsContainer" class="roundedGrayBox useSans" style="min-height: 200px; text-align: left; padding: 10px; margin-bottom: 10px">
+            Loading ...
+        </div>
+
+        <div class="greenButton roundedBlueBox menuButton" id="achievementsBackButton">
+            Close
+        </div>
+    </div>
+</div>
+
+<div id="HowToPlayPanel" class="animated fadeIn" style="display: none; background-color: rgba(0,0,0, 0.8); z-index:2; width: 100%; height: 100%; position: fixed; left:0; top:0; overflow-x: hidden;">
+    <div id="howToPlayCloseBackPanel" style="position: absolute; width: 100%; height: 100%"></div>
+    <div id="HowToPlayPanelInner">
+        <div>
+            <h2>
+                How to Play?
+            </h2>
+        </div>
+
+        <div class="roundedGrayBox useSans" style="min-height: 200px; text-align: left; padding: 10px; margin-bottom: 10px">
+            <a href="assets/images/title_image.png" target="_blank"><img alt="spaceblast.io title image" title="spaceblast.io title image" src="assets/images/title_image_512_312.png" style="width: 100%"></a>
+            <h1 class="useUbuntu">SpaceBlast.io</h1>
+            SpaceBlast is a fun, fast-paced multiplayer asteroid shooter game with ship upgrades. Customize your ship, level-up and take out enemies.<br>
+            <br>
+            <h1 class="useUbuntu">How to Play SpaceBlast.io</h1>
+            <b>Move:</b> W-A-S-D | Arrow Keys | Q-Z-S-D (AZERTY keyboards)<br>
+                                    <b>Fire:</b> Hold left mouse button<br>
+                                    <b>Auto Fire:</b> Press 'E' key to activate<br>
+                                    <b>Skill Upgrades:</b> Press 1-2-3-4-5-6<br>
+            <br>
+            <h1 class="useUbuntu">Ship Classes (Upgrade Tree)</h1>
+            <a href="assets/images/ship_class_tree.png" target="_blank"><img src="assets/images/ship_class_tree.png" alt="Ship Classes (Upgrade Tree)" title="Ship Classes (Upgrade Tree)" style="width: 100%"></a>
+            Base ship can be upgraded to Blaster, Destroyer or Boat on level 10<br>
+                                 Blaster, Destroyer and Boat can be upgraded to other ships on level 25<br>
+            <br>
+            <h1 class="useUbuntu">Tips</h1>
+            Shoot asteroids to gain skill points but watch out for exloding asteroids as those may destroy your ship!<br>
+                         In order to take out enemies, focus on improving your ship first and use exploding asteroids for your benefit. If there is an asteroids nearby an enemy, try to explode that asteroid.<br>
+            <br>
+        </div>
+
+        <div class="greenButton roundedBlueBox menuButton" id="howToPlayBackButton">
+            Close
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
